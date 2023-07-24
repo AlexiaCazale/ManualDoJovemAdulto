@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Artigos";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<BR>
+<div class="col-lg-10 offset-lg-1 col-md-10">
+    <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3">
+            <div class="bg-gradient-warning shadow-primary border-radius-lg pt-4 pb-3">
+                <h5 class="text-white text-capitalize ps-3">Artigos</h5>
+                <h6 class="text-white text-capitalize ps-3">Listagem</h6>
+            </div>
+        </div>
+        <div class="card-body pb-2">
+            <a class="btn btn-secondary bg-gradient-warning" asp-action="Create">Adicionar Novo</a>
+            <div class="table-responsive">
+                    <table id="tblData" class="table table-striped align-items-center mb-0" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder">
+                                    Nome
+                                </th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder">
+                                    Categoria
+                                </th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder">
+                                    Ações
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/assets/js/delete.js"></script>
+    <script src="~/assets/js/article.js"></script>
+}

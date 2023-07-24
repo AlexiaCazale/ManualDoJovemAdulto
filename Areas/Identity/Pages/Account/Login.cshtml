@@ -1,0 +1,70 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Areas/Identity/Pages/_Layout.cshtml";
+}
+
+<div class="container my-auto">
+    <br><br><br><br>
+    <div class="row d-flex">
+        <div class="col-md-6">
+            <img src="~/images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+        </div>
+        
+        <div class="col-md-6 contents">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <br>
+                    <div class="mb-4">
+                        <h3>Manual Do Jovem Adulto</h3>
+                        <p class="mb-4">Área Administrativa</p>
+                    </div>
+                    <div class="card-body">
+
+                        <form role="form" class="text-start" method="post">
+
+                            <div asp-validation-summary="All" class="text-danger" hidden></div>
+                            <div class="form-label-group">
+                                <label class="form-label" asp-for="Input.Email"></label>
+                                <input class="form-control" asp-for="Input.Email">
+                            </div>
+
+                            <div class="form-label-group">
+                                <label class="form-label" asp-for="Input.Password"></label>
+                                <input class="form-control" asp-for="Input.Password">
+                            </div>
+                                    <br>
+                            <div class="form-check form-switch d-flex align-items-center mb-3">
+                                <input asp-for="Input.RememberMe" class="form-check-input" type="checkbox">
+                                <label asp-for="Input.RememberMe" class="form-check-label mb-0 ms-2"></label>
+                            </div>
+
+                            <button type="submit"
+                                class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight btn-primary  w-100 py-3">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+<script>
+    let mensagemErro = '';
+    $(".validation-summary-errors ul li").each(function () {
+        mensagemErro += $(this).text() + '<br/>';
+    });
+
+    if (mensagemErro != '') {
+        $("#Input_Email").focus();
+        swal.fire(
+            'Acesso Negado',
+            mensagemErro,
+            'error'
+        );
+    }
+</script>
+}

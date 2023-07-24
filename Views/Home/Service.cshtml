@@ -1,0 +1,52 @@
+@model manualdojovem.ViewModels.CategoryVM
+@{
+    ViewData["Title"] = "Categorias";
+}
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<!-- Navbar & Hero Start -->
+<div class="container-xxl position-relative p-0">
+    <div class="container-xxl py-5 bg-primary hero-header">
+        <div class="container my-5 py-5 px-lg-5">
+            <div class="row g-5 py-5">
+                <div class="col-12 text-center">
+                    <h1 class="text-white animated slideInDown">Categorias</h1>
+                    <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                    <nav aria-label="breadcrumb">
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Navbar & Hero End -->
+
+<!-- Service Start -->
+<div id="Categorias" class="container-xxl py-5">
+    <div class="container py-5 px-lg-5">
+        <div class="wow fadeInUp" data-wow-delay="0.1s">
+            <p class="section-title text-secondary justify-content-center"><span></span>Nossos
+                Trabalhos<span></span></p>
+            <h1 class="text-center mb-5">Aprenda Conosco</h1>
+        </div>
+        <div class="row g-4">
+
+            @foreach (var category in Model.Categories)
+            {
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex flex-column text-center rounded">
+                        <h5 class="mb-3" data-filter=".@category.Name.ToLower()">
+                            @category.Name</h5>
+                        <a asp-action="Article" asp-route-id="@category.Id" class="btn btn-square"><i
+                            class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- Service End -->

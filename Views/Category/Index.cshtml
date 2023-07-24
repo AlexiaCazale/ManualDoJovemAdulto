@@ -1,0 +1,65 @@
+@model IEnumerable<manualdojovem.Models.Category>
+@{
+    ViewData["Title"] = "Categorias";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<BR>
+    <div class="col-lg-8 offset-lg-2 col-md-12">
+        <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3">
+                <div class="bg-gradient-warning shadow-primary border-radius-lg pt-4 pb-3">
+                    <h5 class="text-white text-capitalize ps-3">Categorias</h5>
+                    <h6 class="text-white text-capitalize ps-3">Listagem</h6>
+                </div>
+            </div>
+            <div class="card-body pb-2">
+                <a class="btn btn-secondary bg-gradient-warning" asp-action="Create">Adicionar Nova</a>
+                <div class="table-responsive">
+                    <table id="tblData" class="table table-striped align-items-center mb-0" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder">
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder">
+                                    Ações
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-secondary mb-0 px-4 w-100">
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td class="text-secondary mb-0">
+                                        <a asp-action="Edit" asp-route-id="@item.Id" title="Editar">
+                                            <span class="material-icons">edit</span>
+                                        </a> &nbsp; &nbsp;
+                                        <a asp-action="Details" asp-route-id="@item.Id" title="Detalhes">
+                                            <span class="material-icons">info</span>
+                                        </a> &nbsp; &nbsp;
+                                        <a href="javascript:void(0)" onclick="Delete('/Category/Delete?id=@item.Id')"
+                                        title="Excluir">
+                                            <span class="material-icons">delete</span>
+                                        </a> &nbsp; &nbsp;
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+@section Scripts{
+<script src="~/assets/js/delete.js"></script>
+<script src="~/assets/js/category.js"></script>
+}

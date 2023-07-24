@@ -1,0 +1,193 @@
+﻿@{
+    ViewData["Title"] = "Manual do Jovem Adulto";
+}
+
+<head>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+    <!-- Navbar & Hero Start -->
+<div class="container-xxl bg-white p-0" >
+    <div class="container-xxl position-relative p-0">
+        <div class="container-xxl bg-primary hero-header">
+            <div class="container px-lg-5">
+                <div class="row g-5 align-items-end">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="text-white mb-4 animated slideInDown">Aprenda a lidar com a vida adulta.</h1>
+                        <p class="text-white pb-3 animated slideInDown">Nossa equipe tem como intuito ajudar todos
+                            os adolescentes que estão aflitos com a vida adulta, trazendo dicas básicas para
+                            facilitar esse grande passo.</p>
+                        <a asp-action="Service"
+                            class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill animated slideInRight">Categorias</a>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <img class="img-fluid animated zoomIn" src="~/img/hero.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+    <!-- Feature Start -->
+    <div id="Sobre" class="container-xxl py-5">
+        <div class="container py-5 px-lg-5">
+            <div class="wow fadeInUp" data-wow-delay="0.1s">
+                <p class="section-title text-secondary justify-content-center"><span></span>O que nos
+                    motiva<span></span></p>
+                <h1 class="text-center mb-5">Entenda sobre nosso trabalho</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="feature-item bg-light rounded text-center p-4">
+                        <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+                        <h5 class="mb-3">Vida Universitária</h5>
+                        <p class="m-0">Estamos passando por uma nova fase de grandes mudanças e queremos diminuir o
+                            número de pessoas com dúvidas sobre seu futuro, assim como nós.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="feature-item bg-light rounded text-center p-4">
+                        <i class="fa fa-3x fa-search text-primary mb-4"></i>
+                        <h5 class="mb-3">Pesquisas Individuais</h5>
+                        <p class="m-0">Nossa equipe tentou englobar diversas questões sobre a vida adulta, que podem
+                            variar entre fazer comidas e até mecânica, assim sanando preocupações frequentes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-item bg-light rounded text-center p-4">
+                        <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
+                        <h5 class="mb-3">Conclusão de Curso</h5>
+                        <p class="m-0">Este site é fruto do nosso estudo e aprendizado no curso Técnico de
+                            Informática para Internet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 px-lg-5">
+            <p class="section-title text-secondary justify-content-center"><span></span>Reviews<span></span></p>
+            <h1 class="text-center mb-5">Opinião dos Nossos Colegas!</h1>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item bg-light rounded my-4">
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Muito legal o site! Bem completo e interativo, eu amei! Facilitou muito a minha vida como recém jovem adulta Hahaha</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="img/Rebecca.jpeg"
+                            style="width: 65px; height: 65px;">
+                        <div class="ps-4">
+                            <a class="h5 mb-1" href="https://instagram.com/rebecca_demetrioo?igshid=YmMyMTA2M2Y=">Rebecca Jatobá</a>
+                            <br>
+                            <span>Colega de Classe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light rounded my-4">
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Adorei! As postagens tem me ajudado bastante, especialmente o de trocar a resistência  do chuveiro, devo os meus banhos quentes ao Manual do Jovem Adulto.</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="img/Yasmin.jpeg"
+                            style="width: 65px; height: 65px;">
+                        <div class="ps-4">
+                            <a class="h5 mb-1" href="https://instagram.com/yass_limaa_?igshid=YmMyMTA2M2Y=">Yasmin Lima</a>
+                            <br>
+                            <span>Colega de Classe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light rounded my-4">
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>O site é de excelente qualidade, diversificado e prático.</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="img/Carol.jpeg"
+                            style="width: 65px; height: 65px;">
+                            <div class="ps-4">
+                            <a class="h5 mb-1" href="https://instagram.com/rovero_carol?igshid=YmMyMTA2M2Y=">Carol Rovero</a>
+                            <br>
+                            <span>Colega de Classe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Team Start -->
+    <div id="Equipe" class="container-xxl py-5">
+        <div class="container py-5 px-lg-5">
+            <div class="wow fadeInUp" data-wow-delay="0.1s">
+                <p class="section-title text-secondary justify-content-center"><span></span>Trabalhando
+                    Juntos<span></span></p>
+                <h1 class="text-center mb-5">Nossa Equipe</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light rounded">
+                        <div class="text-center border-bottom p-4">
+                            <img class="img-fluid rounded-circle mb-4" src="~/img/Alexa.jpeg" alt="">
+                            <h5>Aléxia Cazale</h5>
+                            <span>Líder e Programadora</span>
+                        </div>
+                        <div class="d-flex justify-content-center p-4">
+                            <a class="btn btn-square mx-1" href="https://www.facebook.com/alexia.cazale.5?mibextid=ZbWKwL"><i class="fab fa-facebook-f"
+                                    aria-hidden="true"></i></a>
+                            <a class="btn btn-square mx-1" href="https://twitter.com/TartarugaDr?t=4oBGd_CZ8T7tht79v8-AeA&s=09"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a class="btn btn-square mx-1" href="https://instagram.com/alexiarc?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light rounded">
+                        <div class="text-center border-bottom p-4">
+                            <img class="img-fluid rounded-circle mb-4" src="~/img/team-3.jpg" alt="">
+                            <h5>Fabio Echenique</h5>
+                            <span>Documentação</span>
+                        </div>
+                        <div class="d-flex justify-content-center p-4">
+                            <a class="btn btn-square mx-1" href="https://www.facebook.com/fabio.echenique.7?mibextid=ZbWKwL"><i class="fab fa-facebook-f"
+                                    aria-hidden="true"></i></a>
+                            <a class="btn btn-square mx-1" href="https://twitter.com/oEcheniquee?t=wUiZs_-laRmqJKtOHPZbgQ&s=09"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a class="btn btn-square mx-1" href="https://instagram.com/fabioechenique?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light rounded">
+                        <div class="text-center border-bottom p-4">
+                            <img class="img-fluid rounded-circle mb-4" src="~/img/team-2.jpg" alt="">
+                            <h5>Gabriela Gigliotti</h5>
+                            <span>Designer e Documentação</span>
+                        </div>
+                        <div class="d-flex justify-content-center p-4">
+                            <a class="btn btn-square mx-1" href="https://www.instagram.com/invites/contact/?i=d666zu304psm&utm_content=mr4igpm"><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light rounded">
+                        <div class="text-center border-bottom p-4">
+                            <img class="img-fluid rounded-circle mb-4" src="~/img/team-2.jpg" alt="">
+                            <h5>Laura de Lemos Santos</h5>
+                            <span>Programadora</span>
+                        </div>
+                        <div class="d-flex justify-content-center p-4">
+                            <a class="btn btn-square mx-1" href="https://www.facebook.com/profile.php?id=100059067553557&mibextid=ZbWKwL"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a class="btn btn-square mx-1" href="https://www.instagram.com/laurapontoexe"><i class="fab fa-instagram"
+                            aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>  
+    </div>
+        <!-- Team End -->

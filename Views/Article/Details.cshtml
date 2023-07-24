@@ -1,0 +1,63 @@
+@model manualdojovem.Models.Article
+
+@{
+    ViewData["Title"] = "Artigos";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<BR>
+<div class="col-lg-8 offset-lg-2 col-md-12">
+    <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-warning shadow-primary border-radius-lg pt-4 pb-3">
+                <h5 class="text-white text-capitalize ps-3">Artigos</h5>
+                <h6 class="text-white text-capitalize ps-3">Detalhes</h6>
+            </div>
+        </div>
+        <div class="card-body pb-2">
+            <div class="px-4 py-1">
+                <input type="hidden" asp-for="Id" />
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-group input-group-static">
+                            <label asp-for="Image"></label>
+                            <img src="@Model.Image" class="img-thumbnail" id="PreviewImage" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="col-10">
+                            <div class="form-label-group input-group-static">
+                                <label class="form-label" asp-for="Description "></label>
+                                <textarea asp-for="Description" class="form-control" rows="10" disabled></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="row my-1">
+                            <div class="col-8">
+                                <div class="form-label-group input-group-static">
+                                    <label asp-for="Name"></label>
+                                    <input asp-for="Name" class="form-control" disabled />
+                                    <span asp-validation-for="Name" class="text-danger col-12 text-xs pt-1"></span>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="input-label-group input-group-static">
+                                    <label asp-for="CategoryId"></label>
+                                    <input asp-for="Category.Name" class="form-control" disabled />
+                                    <span asp-validation-for="CategoryId"
+                                        class="text-danger col-12 text-xs pt-1"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group pt-2">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+                    <a class="btn btn-secondary" asp-action="Index">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

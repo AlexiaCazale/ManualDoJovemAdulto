@@ -1,0 +1,70 @@
+@model manualdojovem.Models.Article
+@{
+    ViewData["Title"] = "Artigos";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<BR>
+<div class="col-md-6 offset-md-3 col-sm-12">
+    <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-warning shadow-primary border-radius-lg pt-4 pb-3">
+                <h5 class="text-white text-capitalize ps-3">Artigos
+                </h5>
+                <h6 class="text-white text-capitalize ps-3">Adicionar</h6>
+            </div>
+        </div>
+        <div class="card-body px-0 pb-2">
+            <form asp-action="Create" method="post" class="px-4 py-1" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-label-group input-group-static  my-3">
+                    <label class="form-label" asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger col-12 text-xs pt-1"></span>
+                </div>
+
+                    <div class="input-label-group input-group-static my-3">
+                        <label asp-for="CategoryId"></label>
+                        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId">
+                            <option value="" disabled selected hidden>Selecione uma opção</option>
+                        </select>
+                        <span asp-validation-for="CategoryId" class="text-danger col-12 text-xs pt-1"></span>
+                    </div>
+
+                <div class="form-label-group input-group-static my-3">
+                    <label class="form-label" asp-for="Description "></label>
+                    <textarea asp-alidation-for="Description" class="form-control col-12 pt-1" rows="25"></textarea>
+                </div>
+
+                <div class="col-8">
+                    <div class="input-label-group input-group-static ">
+                        <label asp-for="Image"></label>
+                        <input type="file" id="uploadBox" name="file" class="form-control"
+                            accept=".jpg,.jpeg,.png,.gif" />
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <img src="" class="img-thumbnail" id="PreviewImage" />
+                </div>
+
+                <div class="form-group pt-2">
+                    <input type="submit" value="Salvar" class="btn btn-success" />
+                    <a class="btn btn-danger" asp-action="Index">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+<script>
+    window.addEventListener('load', function () {
+        document.querySelector('input[type="file"]').addEventListener('change', function () {
+            if (this.files && this.files[0]) {
+                var img = document.getElementById('PreviewImage');
+                img.src = URL.createObjectURL(this.files[0]);
+            }
+        });
+    });
+</script>
+}

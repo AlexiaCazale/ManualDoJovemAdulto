@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="~/assets/img/apple-icon.png">
+  <link rel="lord icon" href="~/img/lua.gif" type="image/gif" trigger="loop" style="width:250px;height:250px">
+  <title>
+    Manual Dashboard
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="~/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="~/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="~/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="~/assets/css/argon-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="~/assets/css/loading.css" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show   bg-gray-100">
+  <div class="min-height-300 bg-primary position-absolute w-100"></div>
+  <aside
+    class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4"
+    id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+        aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" asp-controller="Admin" asp-action="Index">
+        <img src="~/img/lua.gif" type="image/gif" class="navbar-brand-img h-100" alt="main_logo">
+
+        <span class="ms-1 font-weight-bold">Manual Dashboard </span>
+      </a>
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link @(ViewBag.Title == "Dashboard" ? "active bg-gradient-warning" : "")" asp-controller="Admin"
+            asp-action="Index">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <img src="~/img/dashboard.gif" type="image/gif" class="navbar-brand-img h-100"></i>
+            </div>
+            <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link @(ViewBag.Title == "Artigos" ? "active bg-gradient-warning" : "")" asp-controller="Article"
+            asp-action="Index">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <img src="~/img/artigo.gif" type="image/gif" class="navbar-brand-img h-100"></i>
+            </div>
+            <span class="nav-link-text ms-1">Artigos</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link @(ViewBag.Title == "Categorias" ? "active bg-gradient-warning" : "")"
+            asp-controller="Category" asp-action="Index">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <img src="~/img/categorias.gif" type="image/gif" class="navbar-brand-img h-100"></i>
+            </div>
+            <span class="nav-link-text ms-1">Categorias</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mx-4">
+      <div class="sidenav-footer position-relative overflow-hidden">
+        <img class="img-fluid w-100" src="~/img/Logo.png" alt="">
+        <div class="flex-auto w-full p-4 pt-0 text-center">
+        </div>
+      </div>
+    </div>
+    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+      <div class="mx-0">
+        <a class="navbar-brand m-0" asp-controller="Home" asp-action="Index">
+          <button type="submit" class="btn bg-gradient-warning mt-4 w-100">
+            <i class="material-icons opacity-10 fa-1x">logout</i> Sair
+          </button>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <main class="main-content position-relative border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur"
+      data-scroll="false">
+      <div class="container-fluid py-1 px-3">
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+          </div>
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line bg-white"></i>
+                  <i class="sidenav-toggler-line bg-white"></i>
+                  <i class="sidenav-toggler-line bg-white"></i>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    @RenderBody()
+
+    <!--   Core JS Files   -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/assets/js/core/popper.min.js"></script>
+    <script src="~/assets/js/core/bootstrap.min.js"></script>
+    <script src="~/assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="~/assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="~/assets/js/plugins/chartjs.min.js"></script>
+    <script>
+      var win = navigator.platform.indexOf('Win') > -1;
+      if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+          damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+      }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="~/assets/js/argon-dashboard.js"></script>
+    <script src="~/assets/js/loading.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

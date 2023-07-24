@@ -1,0 +1,29 @@
+@model manualdojovem.Models.Category
+@{
+    ViewData["Title"] = "Categorias";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<BR>
+    <div class="col-md-6 offset-md-3 col-sm-12">
+        <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-warning shadow-primary border-radius-lg pt-4 pb-3">
+                    <h5 class="text-white text-capitalize ps-3">Categoria</h5>
+                    <h6 class="text-white text-capitalize ps-3">Detalhes</h6>
+                </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+                <div class="px-4 py-1">
+                    <div class="form-label-group my-3">
+                        <label class="form-label" asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" disabled/>
+                    </div>
+                    <div class="form-group pt-2">
+                        <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+                        <a class="btn btn-secondary" asp-action="Index">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
